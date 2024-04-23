@@ -26,7 +26,7 @@ node {
     stage('SonarQube Analysis') {
         def scannerHome = tool 'Sonar';
         withSonarQubeEnv('SonarQube') {
-            sh "${scannerHome}/bin/sonar-scanner -Dprojectkey=hellonode"
+            sh "${scannerHome}/bin/sonar-scanner -DprojectKey=hellonode"
         }
     }
     
